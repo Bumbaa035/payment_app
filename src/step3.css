@@ -1,0 +1,156 @@
+.step3-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f7fa;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lang-btn.active {
+    background-color: #f44;
+    color: #fff;
+}
+
+.shop-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.method-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.method-tab {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.method-tab.active {
+    border: 2px solid #f44;
+    background-color: #fff0f0;
+    color: #f44;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row label {
+    flex: 1;
+}
+
+.pay-btn {
+    background-color: #00c48c;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pay-btn:hover {
+    background-color: #00a97f;
+}
+
+.check-btn {
+    background-color: #fff;
+    color: #00c48c;
+    border: 2px solid #00c48c;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-btn:hover {
+    background-color: #e6fff8;
+}
+
+.powered-by {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.hipay-logo {
+    font-weight: bold;
+    color: #f44;
+}

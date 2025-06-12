@@ -1,0 +1,91 @@
+.step2-container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 24px 32px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step2-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.step2-container p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.step2-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step2-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #444;
+    font-weight: 600;
+}
+
+.step2-form input[type="email"],
+.step2-form input[type="tel"],
+.step2-form input[type="text"] {
+    padding: 10px 14px;
+    margin-top: 6px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.step2-form input[type="email"]:focus,
+.step2-form input[type="tel"]:focus,
+.step2-form input[type="text"]:focus {
+    border-color: #0078d4;
+    outline: none;
+    box-shadow: 0 0 8px #0078d4aa;
+}
+
+.step2-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.step2-buttons button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.step2-buttons button:first-child {
+    background-color: #c92c95;
+    color: white;
+    margin-right: 12px;
+}
+
+.step2-buttons button:first-child:hover {
+    background-color: #c92c95;
+}
+
+.step2-buttons button:last-child {
+    background-color: #eee;
+    color: #444;
+}
+
+.step2-buttons button:last-child:hover {
+    background-color: #ccc;
+}

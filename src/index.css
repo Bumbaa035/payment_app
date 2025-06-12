@@ -1,0 +1,80 @@
+/* Зарим үндсэн стилиуд жишээ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    background-color: #0a74da;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.counter {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.counter-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.counter-interaction button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.payment-info .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.payment-info .label {
+    font-weight: 600;
+}
+
+.payment-form .form-group {
+    margin-bottom: 15px;
+}
+
+.payment-methods h3 {
+    margin-bottom: 5px;
+}
+
+.method-options label {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.pay-button, .back-button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
