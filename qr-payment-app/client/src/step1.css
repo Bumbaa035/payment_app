@@ -1,0 +1,57 @@
+.step1-container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.step1-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c92c95;
+}
+
+.step1-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #444;
+}
+
+.step1-form input {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    margin-top: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.step1-form input:focus {
+    border-color: #0a74da;
+    outline: none;
+    box-shadow: 0 0 7px #0a74daaa;
+}
+
+.step1-form button {
+    margin-top: 24px;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #c92c95;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.step1-form button:hover {
+    background-color: #005ea2;
+}

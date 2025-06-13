@@ -1,22 +1,23 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const PORT = 5173;
+const PORT = 5000;
 
-app.use(cors()); // Cross-Origin зөвшөөрөх
-app.use(express.json()); // JSON parse хийх middleware
+app.use(cors());
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Сервер амжилттай ажиллаж байна!');
-});
+app.post('/verify', (req, res) => {
+  const { token, checkoutId, amount } = req.body;
 
-app.post('/pay', (req, res) => {
-  const { amount, method } = req.body;
-  console.log('🧾 Гүйлгээ ирлээ:', { amount, method });
+  console.log('🔍 Хүлээн авсан:', { token, checkoutId, amount });
 
-  res.json({ success: true, message: 'Төлбөр амжилттай!', data: { amount, method } });
+  if (token && checkoutId && amount) {
+    res.json({ success: true, message: 'Бүх мэдээлэл зөв байна.' });
+  } else {
+    res.status(400).json({ success: false, message: 'Талбар дутуу байна.' });
+  }
 });
 
 app.listen(PORT, () => {
-  console.log(`Сервер http://localhost:${PORT} дээр ажиллаж байна`);
+  console.log(`✅ Сервер http://localhost:${PORT} дээр ажиллаж байна`);
 });

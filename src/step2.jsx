@@ -30,10 +30,31 @@ const Step2 = ({ data, onBack }) => {
     alert('Төлбөрийн мэдээлэл илгээгдлээ:\n' + JSON.stringify(form, null, 2));
   };
 
-  const handleCheck = () => {
-    console.log('Маягтын мэдээлэл:', form);
-    alert('Шалгав. Консол дээр дэлгэрэнгүй мэдээлэл байна.');
+  const handleCheck = async () => {
+    try {
+      const res = await fetch('http://localhost:5173/verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          token: form.token,
+          checkoutId: form.checkoutId,
+          amount: form.amount,
+        }),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        alert('✅ Шалгалт амжилттай: ' + result.message);
+      } else {
+        alert('❌ Алдаа: ' + result.message);
+      }
+    } catch (err) {
+      alert('⚠ Шалгах үед алдаа гарлаа: ' + err.message);
+    }
   };
+
 
   return (
     <div className="step2-container">
@@ -120,7 +141,9 @@ const Step2 = ({ data, onBack }) => {
 
         <div className="step2-buttons" style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between' }}>
           <button type="button" onClick={onBack} style={{ ...buttonStyle, backgroundColor: '#ccc', color: '#000' }}>Буцах</button>
-          <button type="button" onClick={handleCheck} style={{ ...buttonStyle, backgroundColor: '#28a745', color: '#fff' }}>Шалгах</button>
+          <button type="button" onClick={handleCheck} style={{ ...buttonStyle, backgroundColor: '#28a745', color: '#fff' }}>
+            Шалгах
+          </button>
           <button type="submit" style={{ ...buttonStyle, backgroundColor: '#0070f3', color: '#fff' }}>Төлөх</button>
         </div>
       </form>
